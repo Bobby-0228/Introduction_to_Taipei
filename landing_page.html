@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHigh | Aerial Cinematography</title>
+    <style>
+        /* CSS Variables for easy theming */
+        :root {
+            --primary-color: #3498db;
+            --text-color: #ffffff;
+            --overlay-color: rgba(0, 0, 0, 0.5);
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            color: var(--text-color);
+        }
+
+        /* Background Video Styles 
+           - Updated to center the video content regardless of aspect ratio
+           - object-fit: cover scales the image to fill the container
+           - object-position: center ensures the center of the video is always visible
+        */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            object-fit: cover;
+            object-position: center;
+            background: #000; /* Fallback color */
+        }
+
+        /* Overlay 
+           - Darkens the video so text is readable
+        */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-color);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .hero-content {
+            height: 80vh; /* Takes up most of the viewport */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.3s backwards; /* 0.3s delay */
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video 
+         muted: required for autoplay in most browsers
+         loop: repeats the video
+         playsinline: ensures it plays in the background on mobile (not fullscreen)
+    -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./assets/video/drone101.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SkyHigh</div>
+        <div class="nav-links">
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero-content">
+        <h1>Capture the World Above</h1>
+        <p>Professional aerial cinematography and drone solutions for your next big project.</p>
+        <a href="#" class="btn" onclick="alert('Welcome! Scroll down for more content.')">Explore Services</a>
+    </section>
+
+</body>
+</html>
