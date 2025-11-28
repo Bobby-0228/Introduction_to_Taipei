@@ -29,14 +29,149 @@
             <a href="#video-section" class="btn">Watch the Guide</a>
         </div>
     </header>
-    
-    <!-- partial placeholders -->
-    <div data-include="./partials/video-section.html"></div>
-    <div data-include="./partials/orientation.html"></div>
-    <div data-include="./partials/transport.html"></div>
-    <div data-include="./partials/essentials.html"></div>
-    <div data-include="./partials/food.html"></div>
-    <div data-include="./partials/sights.html"></div>
+
+    <section id="video-section" class="container section-padding">
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gJueucOQT5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="intro-text">
+            <h2>The Ultimate Guide to Taipei</h2>
+            <p>With 2.6 million people, Taipei is an amazing destination in Northern Taiwan. Whether you are looking for the world's tallest buildings or natural hot springs, this guide covers the 13 essential things you need to know.</p>
+        </div>
+    </section>
+
+    <section id="orientation" class="bg-light section-padding">
+        <div class="container">
+            <h2 class="section-title">Orientation</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>West Taipei (Old City)</h3>
+                    <p>Narrow lanes, alleyways, and history. Home to the Zhongzheng District, Taipei Main Station, and the Presidential Office.</p>
+                </div>
+                <div class="card">
+                    <h3>East Taipei (Modern)</h3>
+                    <p>Wide grid streets, classy malls, and skyscrapers. Home to the Xinyi District and the iconic Taipei 101.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transport" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Getting In & Around</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-target="airports">Airports</button>
+                <button class="tab-btn" data-target="mrt">The MRT</button>
+                <button class="tab-btn" data-target="taxis">Taxis & Walking</button>
+            </div>
+
+            <div id="airports" class="tab-content active">
+                <div class="info-box">
+                    <h4>Taoyuan International (TPE)</h4>
+                    <p>The main international hub. 37km from city center. Take the Airport MRT (37 mins, ~160 NTD) or a Taxi (~1 hr, ~1500 NTD).</p>
+                </div>
+                <div class="info-box">
+                    <h4>Songshan Airport (TSA)</h4>
+                    <p>Mostly domestic/Japan flights. Located right in the city center (20 mins from Main Station).</p>
+                </div>
+            </div>
+
+            <div id="mrt" class="tab-content">
+                <div class="info-box">
+                    <h4>The Subway System</h4>
+                    <p>Clean, fast, efficient. Buy an <strong>Easy Card</strong> (100 NTD) at vending machines to tap in/out. Note: <strong>No eating or drinking</strong> permitted on the MRT.</p>
+                </div>
+            </div>
+
+            <div id="taxis" class="tab-content">
+                <div class="info-box">
+                    <h4>Taxis & Walking</h4>
+                    <p>Taxis are metered and honest. Have your destination written in Chinese. Taipei is very walkable, but watch out for scooters parked on sidewalks!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="essentials" class="bg-dark section-padding">
+        <div class="container">
+            <h2 class="section-title text-white">Travel Essentials</h2>
+            <div class="grid-4">
+                <div class="icon-card">
+                    <div class="icon">🌤️</div>
+                    <h4>Weather</h4>
+                    <p>Summers are hot/humid with rain. Best time to visit: <strong>Oct - Feb</strong> (mild temps, less rain).</p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">💰</div>
+                    <h4>Money</h4>
+                    <p>New Taiwan Dollar (NTD). Cash is King! Many street vendors don't take cards. Use your Easy Card at 7-11.</p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">🗣️</div>
+                    <h4>Language</h4>
+                    <p>Mandarin is main. English is widely spoken by younger generations. Google Translate is your friend.</p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">🗑️</div>
+                    <h4>Trash</h4>
+                    <p>Public bins are rare. Carry a plastic bag to hold trash until you reach an MRT station or your hotel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="food" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Food & Night Markets</h2>
+            <p class="center-text">"People in Taipei love their food. Follow your nose!"</p>
+            
+            <div class="food-grid">
+                <div class="food-item">
+                    <h3>Night Markets</h3>
+                    <p>The heart of Taipei nightlife. Try <strong>Shilin</strong> (Biggest), <strong>Raohe</strong> (Best Layout), or <strong>Lehua</strong> (Local).</p>
+                </div>
+                <div class="food-item">
+                    <h3>Must Try: Stinky Tofu</h3>
+                    <p>You'll smell it before you see it. Try it fried or with french fries to start!</p>
+                </div>
+                <div class="food-item">
+                    <h3>Tea Culture</h3>
+                    <p>From milk tea to Oolong. Tea shops are on every corner (like TPT or the Oolong Tea Project).</p>
+                </div>
+                <div class="food-item">
+                    <h3>Payment Tip</h3>
+                    <p>Pay at the counter when leaving sit-down restaurants. 10% service charge is common.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sights" class="bg-light section-padding">
+        <div class="container">
+            <h2 class="section-title">Top Things To Do</h2>
+            <ul class="sights-list">
+                <li>
+                    <strong>Taipei 101</strong> - Formerly world's tallest. Great observatory and mall.
+                </li>
+                <li>
+                    <strong>Elephant Mountain</strong> - Hike here for the best view <em>of</em> Taipei 101.
+                </li>
+                <li>
+                    <strong>National Palace Museum</strong> - World's best collection of Chinese artifacts (Jade Cabbage!).
+                </li>
+                <li>
+                    <strong>Chiang Kai-shek Memorial Hall</strong> - Grand architecture and changing of the guards.
+                </li>
+                <li>
+                    <strong>Taipei Zoo & Maokong Gondola</strong> - Pandas, cheap entry, and a scenic cable car ride for tea.
+                </li>
+                <li>
+                    <strong>Dihua Street</strong> - Historic 1600s street perfect for traditional shopping.
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -45,8 +180,6 @@
         </div>
     </footer>
 
-    <!-- load partials -->
-    <script src="./assets/load-sections.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
