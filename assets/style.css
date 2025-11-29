@@ -286,4 +286,5 @@ footer a:hover { text-decoration: underline; }
     .hero h1 { font-size: 2.5rem; }
     .food-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
+    
 }

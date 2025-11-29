@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Palace Museum Guide</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar (same as main site) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Taipei<span>Guide</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#orientation">Orientation</a></li>
+                <li><a href="index.html#transport">Transport</a></li>
+                <li><a href="index.html#essentials">Essentials</a></li>
+                <li><a href="index.html#food">Food</a></li>
+                <li><a href="index.html#sights">Sights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="
+        background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('assets/img/National Palace Museum.jpg');
+        background-size: cover;
+        background-position: center;
+    ">
+        <div class="hero-content">
+            <h1>National Palace Museum</h1>
+            <p>Imperial treasures, 8,000 years of history, and a world-class museum experience.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">About the National Palace Museum</h2>
+
+            <div class="card">
+                <h3>Introduction</h3>
+                <p>
+                    The National Palace Museum (NPM) in Taipei is home to one of the world’s finest collections of
+                    Chinese imperial art and cultural relics. With hundreds of thousands of artifacts spanning
+                    over 8,000 years—from Neolithic pottery to masterpieces from the Qing dynasty—the museum
+                    offers a deep and beautifully curated journey through Chinese history.
+                </p>
+                <p style="margin-top: 10px;">
+                    Visitors can explore galleries dedicated to jade, bronzes, ceramics, calligraphy, painting,
+                    rare books, and more, all housed in a building inspired by traditional Chinese palace
+                    architecture.
+                </p>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>Historical Background</h3>
+                <p>
+                    The museum’s core collection originated from the imperial palaces in Beijing, especially the
+                    Forbidden City. During the turbulent years of the early 20th century, these treasures were
+                    relocated multiple times for safekeeping. Eventually, a significant portion was transferred
+                    to Taiwan, and the National Palace Museum in Taipei officially opened in 1965.
+                </p>
+                <p style="margin-top: 10px;">
+                    Today, the museum stands as a major cultural landmark in East Asia, combining traditional
+                    aesthetics with modern exhibition design and conservation technology.
+                </p>
+                <p style="margin-top: 10px;">
+                    <strong>Nearest MRT:</strong> Shilin Station (Red Line), then take a short bus or taxi ride
+                    to the museum entrance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Interactive Treasures Section -->
+    <section class="section-padding" id="treasures">
+        <div class="container">
+            <h2 class="section-title">The Three National Treasures</h2>
+            <p style="margin-bottom: 20px;">
+                Tap on one of the three treasures below to see its description and fun fact.
+            </p>
+
+            <!-- Tabs / Buttons：改用 .tabs + .tab-btn -->
+            <div class="card" style="margin-bottom: 25px;">
+                <div class="tabs">
+                    <button class="tab-btn active" data-target="treasure-jade">
+                        Jadeite Cabbage
+                    </button>
+                    <button class="tab-btn" data-target="treasure-ding">
+                        Mao Gong Ding
+                    </button>
+                    <button class="tab-btn" data-target="treasure-meat">
+                        Meat-shaped Stone
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detail Panel：改成三個 .tab-content，配合共用 JS -->
+            <div class="card treasure-detail-card">
+
+                <!-- Jadeite Cabbage -->
+                <div id="treasure-jade" class="tab-content active">
+                    <div>
+                        <img
+                            src="assets/img/Jadeite_Cabbage,_National_Palace_Museum.jpg"
+                            alt="Jadeite Cabbage"
+                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                        >
+                    </div>
+                    <div>
+                        <h3>Jadeite Cabbage</h3>
+                        <p>
+                            The Jadeite Cabbage is one of the most beloved pieces in the National Palace Museum.
+                            It uses the natural green and white colors of the jade to create realistic cabbage
+                            leaves and stalks, with a locust and katydid hidden among the leaves.
+                        </p>
+                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
+                            💡 Fun fact: The cabbage symbolizes purity and fertility, and is often interpreted
+                            as a blessing for many descendants.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mao Gong Ding -->
+                <div id="treasure-ding" class="tab-content">
+                    <div>
+                        <img
+                            src="assets/img/images.jpg"
+                            alt="Mao Gong Ding bronze vessel"
+                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                        >
+                    </div>
+                    <div>
+                        <h3>Mao Gong Ding</h3>
+                        <p>
+                            The Mao Gong Ding is a large bronze ritual tripod from the Western Zhou dynasty.
+                            It is renowned for having the longest inscription found on any ancient Chinese bronze,
+                            recording royal commands and political events of the time.
+                        </p>
+                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
+                            💡 Fun fact: The inscription on Mao Gong Ding is a key source for understanding
+                            early Zhou political history and ritual culture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Meat-shaped Stone -->
+                <div id="treasure-meat" class="tab-content">
+                    <div>
+                        <img
+                            src="assets/img/Meat-Shaped_Stone_Gathering_of_Treasures_1.jpg"
+                            alt="Meat-shaped Stone"
+                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                        >
+                    </div>
+                    <div>
+                        <h3>Meat-shaped Stone</h3>
+                        <p>
+                            The Meat-shaped Stone is a piece of banded jasper carved and colored to resemble a
+                            piece of braised pork belly. Its layers of “fat” and “lean meat” follow the natural
+                            pattern of the stone, making it incredibly realistic.
+                        </p>
+                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
+                            💡 Fun fact: It is one of the most photographed objects in the museum—despite looking
+                            delicious, it is of course completely inedible.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Visiting Tips -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Visiting Tips</h2>
+
+            <div class="card">
+                <h3>How to Make the Most of Your Visit</h3>
+                <p>
+                    The collection is huge, and it’s impossible to see everything in one go. For a first-time visit,
+                    focus on a few key areas such as jade, bronzes, and the “Three Treasures” section. The museum
+                    also offers audio guides and guided tours in multiple languages.
+                </p>
+                <p style="margin-top: 10px;">
+                    For a more relaxed experience, visit on weekday mornings or later in the afternoon. You can also
+                    combine your trip with the nearby Zhishan Garden or head to Shilin Night Market in the evening
+                    for food and street life.
+                </p>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>Practical Information</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Location:</strong> Shilin District, Taipei</li>
+                    <li><strong>Suggested Time:</strong> 2–3 hours (more if you love art & history)</li>
+                    <li><strong>Tickets:</strong> Discounts are often available for students and combo tickets with the Southern Branch.</li>
+                    <li><strong>Facilities:</strong> Lockers, café, gift shop, and a scenic outdoor area.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Taipei Travel Guide</p>
+        </div>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
