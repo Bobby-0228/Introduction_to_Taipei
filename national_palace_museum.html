@@ -27,7 +27,7 @@
     <header class="hero" style="
         background:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('assets/img/National Palace Museum.jpg');
+        url('assets/img/National Palace Museum/National Palace Museum.jpg');
         background-size: cover;
         background-position: center;
     ">
@@ -51,28 +51,63 @@
                     offers a deep and beautifully curated journey through Chinese history.
                 </p>
                 <p style="margin-top: 10px;">
-                    Visitors can explore galleries dedicated to jade, bronzes, ceramics, calligraphy, painting,
-                    rare books, and more, all housed in a building inspired by traditional Chinese palace
+                    Visitors can explore galleries dedicated to jade, bronzes, ceramics, calligraphy, painting, and more, all housed in a building inspired by traditional Chinese palace
                     architecture.
                 </p>
+                <!-- Photo Carousel -->
+                <div class="intro-photo-carousel">
+                    <button class="carousel-arrow prev" aria-label="Previous photo">&#10094;</button>
+
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <img src="assets/img/National Palace Museum/list/1.jpg" alt="National Palace Museum view 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/National Palace Museum/list/2.jpg" alt="National Palace Museum view 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/National Palace Museum/list/3.jpg" alt="National Palace Museum view 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/National Palace Museum/list/4.jpg" alt="National Palace Museum view 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/National Palace Museum/list/5.jpg" alt="National Palace Museum view 5">
+                        </div>
+                    </div>
+
+                    <button class="carousel-arrow next" aria-label="Next photo">&#10095;</button>
+                </div>
             </div>
 
-            <div class="card" style="margin-top: 20px;">
-                <h3>Historical Background</h3>
-                <p>
-                    The museum’s core collection originated from the imperial palaces in Beijing, especially the
-                    Forbidden City. During the turbulent years of the early 20th century, these treasures were
-                    relocated multiple times for safekeeping. Eventually, a significant portion was transferred
-                    to Taiwan, and the National Palace Museum in Taipei officially opened in 1965.
-                </p>
-                <p style="margin-top: 10px;">
-                    Today, the museum stands as a major cultural landmark in East Asia, combining traditional
-                    aesthetics with modern exhibition design and conservation technology.
-                </p>
-                <p style="margin-top: 10px;">
-                    <strong>Nearest MRT:</strong> Shilin Station (Red Line), then take a short bus or taxi ride
-                    to the museum entrance.
-                </p>
+            <div class="card card-flex" style="margin-top: 20px;">
+                <div class="card-text">
+                    <h3>Historical Background</h3>
+
+                    <p>
+                        The National Palace Museum in Taipei traces its origins to the Palace Museum in Beijing, 
+                        founded in 1925 within the Forbidden City. During the Sino-Japanese War, the most precious 
+                        parts of the imperial art collection were packed and relocated southward to protect them 
+                        from wartime damage.
+                    </p>
+
+                    <p style="margin-top: 10px;">
+                        After World War II, the Chinese Civil War prompted another major move. In 1949, 
+                        a significant portion of the collection—about one-fifth of the original treasures—was 
+                        transported to Taiwan for safekeeping. These artifacts were first stored in temporary 
+                        facilities before the construction of a permanent museum in the Waishuangxi area of Taipei.
+                    </p>
+
+                    <p style="margin-top: 10px;">
+                        In 1965, the National Palace Museum officially opened, becoming the long-term home for 
+                        these invaluable cultural relics. Today, it stands as one of the world’s greatest repositories 
+                        of Chinese art, shaped profoundly by this extraordinary journey of preservation.
+                    </p>
+                </div>
+
+                <div class="card-image">
+                    <img src="assets/img/National Palace Museum/history.jpg" alt="National Palace Museum history">
+                </div>
             </div>
         </div>
     </section>
@@ -81,23 +116,17 @@
     <section class="section-padding" id="treasures">
         <div class="container">
             <h2 class="section-title">The Three National Treasures</h2>
-            <p style="margin-bottom: 20px;">
-                Tap on one of the three treasures below to see its description and fun fact.
-            </p>
-
             <!-- Tabs / Buttons：改用 .tabs + .tab-btn -->
-            <div class="card" style="margin-bottom: 25px;">
-                <div class="tabs">
-                    <button class="tab-btn active" data-target="treasure-jade">
-                        Jadeite Cabbage
-                    </button>
-                    <button class="tab-btn" data-target="treasure-ding">
-                        Mao Gong Ding
-                    </button>
-                    <button class="tab-btn" data-target="treasure-meat">
-                        Meat-shaped Stone
-                    </button>
-                </div>
+            <div class="tabs">
+                <button class="tab-btn active" data-target="treasure-jade">
+                    Jadeite Cabbage
+                </button>
+                <button class="tab-btn" data-target="treasure-ding">
+                    Mao Gong Ding
+                </button>
+                <button class="tab-btn" data-target="treasure-meat">
+                    Meat-shaped Stone
+                </button>
             </div>
 
             <!-- Detail Panel：改成三個 .tab-content，配合共用 JS -->
@@ -107,7 +136,7 @@
                 <div id="treasure-jade" class="tab-content active">
                     <div>
                         <img
-                            src="assets/img/Jadeite_Cabbage,_National_Palace_Museum.jpg"
+                            src="assets/img/National Palace Museum/Jadeite_Cabbage,_National_Palace_Museum.jpg"
                             alt="Jadeite Cabbage"
                             style="width:100%; border-radius:8px; margin-bottom:15px;"
                         >
@@ -115,13 +144,18 @@
                     <div>
                         <h3>Jadeite Cabbage</h3>
                         <p>
-                            The Jadeite Cabbage is one of the most beloved pieces in the National Palace Museum.
-                            It uses the natural green and white colors of the jade to create realistic cabbage
-                            leaves and stalks, with a locust and katydid hidden among the leaves.
+                            The Jadeite Cabbage Carved from a single piece of naturally colored jadeite, the sculpture 
+                            cleverly incorporates the stone’s white and green hues to resemble a fresh head of Chinese 
+                            cabbage. The artist skillfully used the material’s natural imperfections—such as color 
+                            variations and cracks—to form the leaves, stalks, and subtle textures of the vegetable.
                         </p>
-                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
-                            💡 Fun fact: The cabbage symbolizes purity and fertility, and is often interpreted
-                            as a blessing for many descendants.
+                        <p style="margin-top: 10px;">
+                            Resting on the cabbage are two tiny creatures: a katydid and a locust, both intricately 
+                            carved. These insects traditionally symbolize fertility and abundance in Chinese culture, 
+                            leading many scholars to interpret the piece as a metaphor for prosperity and blessings for 
+                            future generations. Although the exact sculptor and date remain unknown, the piece is often 
+                            associated with the late Qing dynasty and is believed to have been part of the dowry of Consort 
+                            Jin, one of the Guangxu Emperor’s wives.
                         </p>
                     </div>
                 </div>
@@ -130,7 +164,7 @@
                 <div id="treasure-ding" class="tab-content">
                     <div>
                         <img
-                            src="assets/img/images.jpg"
+                            src="assets/img/National Palace Museum/images.jpg"
                             alt="Mao Gong Ding bronze vessel"
                             style="width:100%; border-radius:8px; margin-bottom:15px;"
                         >
@@ -138,13 +172,18 @@
                     <div>
                         <h3>Mao Gong Ding</h3>
                         <p>
-                            The Mao Gong Ding is a large bronze ritual tripod from the Western Zhou dynasty.
-                            It is renowned for having the longest inscription found on any ancient Chinese bronze,
-                            recording royal commands and political events of the time.
+                            The Mao Gong Ding is one of the most important bronze ritual vessels from ancient China. 
+                            Dating to the Western Zhou dynasty (circa 9th century BCE), this massive tripod cauldron 
+                            was used for ceremonial purposes and is celebrated both for its craftsmanship and its 
+                            extraordinary inscription.
                         </p>
-                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
-                            💡 Fun fact: The inscription on Mao Gong Ding is a key source for understanding
-                            early Zhou political history and ritual culture.
+                        <p style="margin-top: 10px;">
+                            Cast in bronze with a dignified, symmetrical form, the vessel features two upright 
+                            handles and three stout legs—hallmarks of Zhou ritual bronzes. Its most remarkable feature 
+                            is the 500-character inscription cast inside the belly of the vessel. This inscription is 
+                            the longest known text on any ancient Chinese bronze and serves as a vital historical source. 
+                            It records the Zhou king’s praise and instructions to a noble named Mao Gong (“Duke Mao”), 
+                            commending his loyalty and outlining principles of virtuous governance.
                         </p>
                     </div>
                 </div>
@@ -153,7 +192,7 @@
                 <div id="treasure-meat" class="tab-content">
                     <div>
                         <img
-                            src="assets/img/Meat-Shaped_Stone_Gathering_of_Treasures_1.jpg"
+                            src="assets/img/National Palace Museum/Meat-Shaped_Stone_Gathering_of_Treasures_1.jpg"
                             alt="Meat-shaped Stone"
                             style="width:100%; border-radius:8px; margin-bottom:15px;"
                         >
@@ -161,13 +200,17 @@
                     <div>
                         <h3>Meat-shaped Stone</h3>
                         <p>
-                            The Meat-shaped Stone is a piece of banded jasper carved and colored to resemble a
-                            piece of braised pork belly. Its layers of “fat” and “lean meat” follow the natural
-                            pattern of the stone, making it incredibly realistic.
+                            The Meat-shaped Stone is carved from banded jasper, a type of quartz whose natural layers 
+                            of red, brown, and ivory tones remarkably resemble the appearance of braised pork belly—a 
+                            classic Chinese dish. Through careful carving and polishing, the artisan enhanced the stone’s 
+                            natural striations to mimic the glossy skin, tender layers of fat, and rich texture of 
+                            slow-cooked Dongpo pork.
                         </p>
-                        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.8;">
-                            💡 Fun fact: It is one of the most photographed objects in the museum—despite looking
-                            delicious, it is of course completely inedible.
+                        <p style="margin-top: 10px;">
+                            The piece dates to the Qing dynasty, though the exact artist remains unknown. Its lifelike 
+                            realism and playful use of natural materials reflect the Qing court’s appreciation for craftsmanship 
+                            that blurs the line between art and nature. Historically, the Meat-shaped Stone was part of the 
+                            collection of the Qing imperial household and was treasured for its whimsical charm and technical virtuosity.
                         </p>
                     </div>
                 </div>
@@ -190,21 +233,36 @@
                     also offers audio guides and guided tours in multiple languages.
                 </p>
                 <p style="margin-top: 10px;">
-                    For a more relaxed experience, visit on weekday mornings or later in the afternoon. You can also
-                    combine your trip with the nearby Zhishan Garden or head to Shilin Night Market in the evening
-                    for food and street life.
+                    For a more relaxed experience, visit on weekday mornings or later in the afternoon. 
+                    You can also combine your trip with 
+                    <a href="shilin_night_market.html" class="inline-link">Shilin Night Market</a> 
+                    in the evening for food and street life.
                 </p>
             </div>
 
             <div class="card" style="margin-top: 20px;">
                 <h3>Practical Information</h3>
+
                 <ul style="margin-left: 20px; margin-top: 10px;">
                     <li><strong>Location:</strong> Shilin District, Taipei</li>
                     <li><strong>Suggested Time:</strong> 2–3 hours (more if you love art & history)</li>
                     <li><strong>Tickets:</strong> Discounts are often available for students and combo tickets with the Southern Branch.</li>
                     <li><strong>Facilities:</strong> Lockers, café, gift shop, and a scenic outdoor area.</li>
                 </ul>
+
+                <!-- Google Map Embed -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m2!2m1!1sNational+Palace+Museum+Taipei!5e0!3m2!1sen!2stw!4v1700000000001!5m2!1sen!2stw"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+
             </div>
+
         </div>
     </section>
 

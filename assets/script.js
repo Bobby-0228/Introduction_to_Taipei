@@ -51,4 +51,65 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    initIntroCarousel();
 });
+
+function initIntroCarousel() {
+    const carousel = document.querySelector('.intro-photo-carousel');
+    if (!carousel) return;
+
+    const items = carousel.querySelectorAll('.carousel-item');
+    const imgElements = carousel.querySelectorAll('.carousel-item img');
+    if (!items.length || !imgElements.length) return;
+
+    // 先把原始圖片路徑存起來
+    const imageUrls = Array.from(imgElements).map(img => img.getAttribute('src'));
+    const total = imageUrls.length;
+    let offset = 0; // 控制目前顯示的起點
+
+    const render = (withAnimation = false) => {
+        items.forEach((item, i) => {
+            const img = item.querySelector('img');
+            const index = (i + offset + total) % total;
+            img.src = imageUrls[index];
+
+            // 先移除 center / fade
+            item.classList.remove('center', 'fade');
+        });
+
+        // 中間這個格子當主圖（index 2，0-based）
+        const centerItem = items[2];
+        if (centerItem) {
+            centerItem.classList.add('center');
+
+            if (withAnimation) {
+                // 重新觸發動畫（小技巧：強制 reflow）
+                centerItem.classList.remove('fade');
+                void centerItem.offsetWidth;
+                centerItem.classList.add('fade');
+            }
+        }
+    };
+
+    const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+    const nextBtn = carousel.querySelector('.carousel-arrow.next');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            offset = (offset - 1 + total) % total;
+            render(true);   // 帶動畫
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            offset = (offset + 1) % total;
+            render(true);   // 帶動畫
+        });
+    }
+
+    // 初始渲染（不需要動畫）
+    render(false);
+}
+
