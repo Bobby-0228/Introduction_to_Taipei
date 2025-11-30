@@ -24,13 +24,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" style="
-        background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('assets/img/National Palace Museum/National Palace Museum.jpg');
-        background-size: cover;
-        background-position: center;
-    ">
+    <header class="hero hero-npm">
         <div class="hero-content">
             <h1>National Palace Museum</h1>
             <p>Imperial treasures, 8,000 years of history, and a world-class museum experience.</p>
@@ -50,7 +44,7 @@
                     over 8,000 years—from Neolithic pottery to masterpieces from the Qing dynasty—the museum
                     offers a deep and beautifully curated journey through Chinese history.
                 </p>
-                <p style="margin-top: 10px;">
+                <p class="mt-10">
                     Visitors can explore galleries dedicated to jade, bronzes, ceramics, calligraphy, painting, and more, all housed in a building inspired by traditional Chinese palace
                     architecture.
                 </p>
@@ -80,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="card card-flex" style="margin-top: 20px;">
+            <div class="card card-flex mt-20">
                 <div class="card-text">
                     <h3>Historical Background</h3>
 
@@ -91,14 +85,14 @@
                         from wartime damage.
                     </p>
 
-                    <p style="margin-top: 10px;">
+                    <p class="mt-10">
                         After World War II, the Chinese Civil War prompted another major move. In 1949, 
                         a significant portion of the collection—about one-fifth of the original treasures—was 
                         transported to Taiwan for safekeeping. These artifacts were first stored in temporary 
                         facilities before the construction of a permanent museum in the Waishuangxi area of Taipei.
                     </p>
 
-                    <p style="margin-top: 10px;">
+                    <p class="mt-10">
                         In 1965, the National Palace Museum officially opened, becoming the long-term home for 
                         these invaluable cultural relics. Today, it stands as one of the world’s greatest repositories 
                         of Chinese art, shaped profoundly by this extraordinary journey of preservation.
@@ -113,10 +107,9 @@
     </section>
 
         <!-- Interactive Treasures Section -->
-    <section class="section-padding" id="treasures">
+    <section class="section-padding">
         <div class="container">
             <h2 class="section-title">The Three National Treasures</h2>
-            <!-- Tabs / Buttons：改用 .tabs + .tab-btn -->
             <div class="tabs">
                 <button class="tab-btn active" data-target="treasure-jade">
                     Jadeite Cabbage
@@ -129,16 +122,15 @@
                 </button>
             </div>
 
-            <!-- Detail Panel：改成三個 .tab-content，配合共用 JS -->
-            <div class="card treasure-detail-card">
-
+            <!-- Detail Panel -->
+            <div class="card">
                 <!-- Jadeite Cabbage -->
                 <div id="treasure-jade" class="tab-content active">
                     <div>
                         <img
                             src="assets/img/National Palace Museum/Jadeite_Cabbage,_National_Palace_Museum.jpg"
                             alt="Jadeite Cabbage"
-                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                            class="main-img"
                         >
                     </div>
                     <div>
@@ -149,7 +141,7 @@
                             cabbage. The artist skillfully used the material’s natural imperfections—such as color 
                             variations and cracks—to form the leaves, stalks, and subtle textures of the vegetable.
                         </p>
-                        <p style="margin-top: 10px;">
+                        <p class="mt-10">
                             Resting on the cabbage are two tiny creatures: a katydid and a locust, both intricately 
                             carved. These insects traditionally symbolize fertility and abundance in Chinese culture, 
                             leading many scholars to interpret the piece as a metaphor for prosperity and blessings for 
@@ -166,7 +158,7 @@
                         <img
                             src="assets/img/National Palace Museum/images.jpg"
                             alt="Mao Gong Ding bronze vessel"
-                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                            class="main-img"
                         >
                     </div>
                     <div>
@@ -177,7 +169,7 @@
                             was used for ceremonial purposes and is celebrated both for its craftsmanship and its 
                             extraordinary inscription.
                         </p>
-                        <p style="margin-top: 10px;">
+                        <p class="mt-10">
                             Cast in bronze with a dignified, symmetrical form, the vessel features two upright 
                             handles and three stout legs—hallmarks of Zhou ritual bronzes. Its most remarkable feature 
                             is the 500-character inscription cast inside the belly of the vessel. This inscription is 
@@ -194,7 +186,7 @@
                         <img
                             src="assets/img/National Palace Museum/Meat-Shaped_Stone_Gathering_of_Treasures_1.jpg"
                             alt="Meat-shaped Stone"
-                            style="width:100%; border-radius:8px; margin-bottom:15px;"
+                            class="main-img"
                         >
                     </div>
                     <div>
@@ -206,7 +198,7 @@
                             natural striations to mimic the glossy skin, tender layers of fat, and rich texture of 
                             slow-cooked Dongpo pork.
                         </p>
-                        <p style="margin-top: 10px;">
+                        <p class="mt-10">
                             The piece dates to the Qing dynasty, though the exact artist remains unknown. Its lifelike 
                             realism and playful use of natural materials reflect the Qing court’s appreciation for craftsmanship 
                             that blurs the line between art and nature. Historically, the Meat-shaped Stone was part of the 
@@ -232,7 +224,7 @@
                     focus on a few key areas such as jade, bronzes, and the “Three Treasures” section. The museum
                     also offers audio guides and guided tours in multiple languages.
                 </p>
-                <p style="margin-top: 10px;">
+                <p class="mt-10">
                     For a more relaxed experience, visit on weekday mornings or later in the afternoon. 
                     You can also combine your trip with 
                     <a href="shilin_night_market.html" class="inline-link">Shilin Night Market</a> 
@@ -240,10 +232,10 @@
                 </p>
             </div>
 
-            <div class="card" style="margin-top: 20px;">
+            <div class="card mt-20">
                 <h3>Practical Information</h3>
 
-                <ul style="margin-left: 20px; margin-top: 10px;">
+                <ul class="info-list">
                     <li><strong>Location:</strong> Shilin District, Taipei</li>
                     <li><strong>Suggested Time:</strong> 2–3 hours (more if you love art & history)</li>
                     <li><strong>Tickets:</strong> Discounts are often available for students and combo tickets with the Southern Branch.</li>
@@ -259,7 +251,6 @@
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-
 
             </div>
 
