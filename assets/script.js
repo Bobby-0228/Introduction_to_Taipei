@@ -113,3 +113,73 @@ function initIntroCarousel() {
     render(false);
 }
 
+/* ===== Hero Slider ===== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    initHeroSlider();
+});
+
+function initHeroSlider() {
+    const slides = document.querySelectorAll(".hero-slide");    // list of divs
+    const leftBtn = document.querySelector(".hero-arrow.left");
+    const rightBtn = document.querySelector(".hero-arrow.right");
+    const heroHeader = document.querySelector(".hero.hero-index"); // header in index.html
+
+    if (!slides.length || !heroHeader) return;
+
+    // Current slide index
+    let index = 0;
+
+    // Core func.: show the slide at index i
+    function showSlide(i) {
+        // Remove class "active" from all slides
+        slides.forEach(s => s.classList.remove("active"));
+        // add "active" for current slide
+        slides[i].classList.add("active");
+
+        // Read "data-bg-class" from current slide
+        const bgClass = slides[i].dataset.bgClass;
+
+        // Apply "data-bg-class" to header (change header background)
+        if (bgClass) {
+            // Remove all classes that start with "hero-"
+            Array.from(heroHeader.classList)
+                .filter(cls => cls.startsWith("hero-"))
+                .forEach(cls => heroHeader.classList.remove(cls));
+
+            // Add new background class
+            heroHeader.classList.add(bgClass);
+        }
+    }
+
+    leftBtn.addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    });
+
+    rightBtn.addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    });
+
+    // Auto-slide every 6 seconds
+    setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }, 6000);
+
+    // Touch swipe on mobile
+    let startX = 0;
+    const slider = document.querySelector(".hero-slider");
+    if (slider) {
+        slider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+        slider.addEventListener("touchend", e => {
+            let endX = e.changedTouches[0].clientX;
+            if (endX - startX > 50) leftBtn.click();
+            if (startX - endX > 50) rightBtn.click();
+        });
+    }
+
+    // Initial Render
+    showSlide(index);
+}

@@ -113,11 +113,6 @@ ul {
     text-align: center;
     color: white;
 }
-.hero-index {
-    background-image:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('img/Taipei_Landscape.avif');
-}
 .hero-npm {
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
@@ -459,3 +454,48 @@ footer a:hover { text-decoration: underline; }
     list-style-position: outside;
 }
 
+/* ===== Hero Slider ===== */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.hero-slides {
+    overflow: hidden;
+}
+
+.hero-slide {
+    display: none;
+    animation: fadeHero 0.6s ease;
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+@keyframes fadeHero {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.hero-arrow.left { left: -40px; }
+.hero-arrow.right { right: -40px; }
+
+@media (max-width: 768px) {
+    .hero-arrow.left { left: 10px; }
+    .hero-arrow.right { right: 10px; }
+}

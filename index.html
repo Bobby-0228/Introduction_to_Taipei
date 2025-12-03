@@ -22,11 +22,39 @@
         </div>
     </nav>
 
+    <!-- ============================
+        HERO SECTION (Image + Slider Text)
+        This section shows a hero background image,
+        and the text inside is a slider that auto-rotates.
+        Only one .hero-slide has the "active" class at a time.
+        JS will switch active between slides.
+
+        CSS/JS: Hero Slider
+    ============================== -->
+
     <header class="hero hero-index">
-        <div class="hero-content">
-            <h1>Taipei: East Meets West</h1>
-            <p>Modern skyscrapers nestled next to traditional temples. Michelin stars next to night markets.</p>
-            <a href="#video-section" class="btn">Watch the Guide</a>
+        <div class="hero-slider">
+
+            <button class="hero-arrow left">&#10094;</button>
+            <div class="hero-slides">
+
+                <!-- First slide shown by default -->
+                <!-- data-bg-class -> CamelCase -> dataset.bgClass -->
+                <div class="hero-slide active" data-bg-class="hero-ynp">
+                    <h1>YangMingShan National Park</h1>
+                    <p>Volcanic landscapes, flower seasons, and cool mountain air just north of Taipei.</p>
+                    <a href="./yangmingshan_national_park.html" class="btn">More Information</a>
+                </div>
+
+                <div class="hero-slide" data-bg-class="hero-npm">
+                    <h1>National Palace Museum</h1>
+                    <p>Imperial treasures, 8,000 years of history, and a world-class museum experience.</p>
+                    <a href="./national_palace_museum.html" class="btn">More Information</a>
+                </div>
+
+            </div>
+            <button class="hero-arrow right">&#10095;</button>
+
         </div>
     </header>
 
