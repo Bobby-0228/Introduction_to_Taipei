@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taipei Travel Guide: Everything You Need To Know</title>
+    <title>Taipei Guide: Everything You Need To Know</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -13,11 +13,10 @@
         <div class="container">
             <a href="#" class="logo">Taipei<span>Guide</span></a>
             <ul class="nav-links">
+                <li><a href="#sights">Sights</a></li>
+                <li><a href="#essentials">Essentials</a></li>
                 <li><a href="#orientation">Orientation</a></li>
                 <li><a href="#transport">Transport</a></li>
-                <li><a href="#essentials">Essentials</a></li>
-                <li><a href="#food">Food</a></li>
-                <li><a href="#sights">Sights</a></li>
             </ul>
         </div>
     </nav>
@@ -57,6 +56,72 @@
 
         </div>
     </header>
+
+     <!-- ============================
+        SIGHTS LIST SECTION (Text with URL)
+        This section shows a hero background image,
+        and the text inside is a slider that auto-rotates.
+        Only one .hero-slide has the "active" class at a time.
+        JS will switch active between slides.
+
+        CSS/JS: Hero Slider
+    ============================== -->
+    <section id="sights" class="bg-light section-padding">
+        <div class="container">
+            <h2 class="section-title">Popular Places</h2>
+            <ul class="sights-list">
+                <li>
+                    <strong>Taipei 101</strong> - Formerly world's tallest. Great observatory and mall.
+                </li>
+                <li>
+                    <strong>Elephant Mountain</strong> - Hike here for the best view <em>of</em> Taipei 101.
+                </li>
+                <li>
+                    <strong>Shilin Night Markeet</strong> - Snacks.
+                </li>
+                <li>
+                    <a href="./national_palace_museum.html"> <strong>YangMingShan National Park</strong> </a> - Volcanic landscapes, flower seasons, and cool mountain air just north of Taipei.
+                </li>
+                <li>
+                    <a href="./national_palace_museum.html"> <strong>National Palace Museum</strong> </a> - Imperial treasures, 8,000 years of history, and a world-class museum experience.
+                </li>
+                <li>
+                    <strong>Chiang Kai-shek Memorial Hall</strong> - Grand architecture and changing of the guards.
+                </li>
+                <li>
+                    <strong>Taipei Zoo & Maokong Gondola</strong> - Pandas, cheap entry, and a scenic cable car ride for tea.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+        <section id="essentials" class="bg-dark section-padding">
+        <div class="container">
+            <h2 class="section-title text-white">Travel Essentials</h2>
+            <div class="grid-4">
+                <div class="icon-card">
+                    <div class="icon">🌤️</div>
+                    <h4>Weather</h4>
+                    <p>Summers are hot/humid with rain. Best time to visit: <strong>Oct - Feb</strong> (mild temperature, less rain).</p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">💰</div>
+                    <h4>Money</h4>
+                    <p>It's best to bring enough cash. Many vendors don't take credit cards, but mobile payments such as LINE Pay are common. </p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">🗣️</div>
+                    <h4>Language</h4>
+                    <p>Mandarin and Taiwanese are main. English is widely spoken by younger generations.</p>
+                </div>
+                <div class="icon-card">
+                    <div class="icon">🗑️</div>
+                    <h4>Trash</h4>
+                    <p>Public bins are rare, but there's always one in the MRT station.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="orientation" class="bg-light section-padding">
         <div class="container">
@@ -105,99 +170,15 @@
             <div id="taxis" class="tab-content">
                 <div class="info-box">
                     <h4>Taxis & Walking</h4>
-                    <p>Taxis are metered and honest. Have your destination written in Chinese. Taipei is very walkable, but watch out for scooters parked on sidewalks!</p>
+                    <p>The MRT can take you almost anywhere, but Taxis and Ubers are common, too. Taipei is very walkable, but watch out for scooters parked on sidewalks!</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="essentials" class="bg-dark section-padding">
-        <div class="container">
-            <h2 class="section-title text-white">Travel Essentials</h2>
-            <div class="grid-4">
-                <div class="icon-card">
-                    <div class="icon">🌤️</div>
-                    <h4>Weather</h4>
-                    <p>Summers are hot/humid with rain. Best time to visit: <strong>Oct - Feb</strong> (mild temps, less rain).</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">💰</div>
-                    <h4>Money</h4>
-                    <p>New Taiwan Dollar (NTD). Cash is King! Many street vendors don't take cards. Use your Easy Card at 7-11.</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">🗣️</div>
-                    <h4>Language</h4>
-                    <p>Mandarin is main. English is widely spoken by younger generations. Google Translate is your friend.</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">🗑️</div>
-                    <h4>Trash</h4>
-                    <p>Public bins are rare. Carry a plastic bag to hold trash until you reach an MRT station or your hotel.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="food" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Food & Night Markets</h2>
-            <p class="center-text">"People in Taipei love their food. Follow your nose!"</p>
-            
-            <div class="food-grid">
-                <div class="food-item">
-                    <h3>Night Markets</h3>
-                    <p>The heart of Taipei nightlife. Try <strong>Shilin</strong> (Biggest), <strong>Raohe</strong> (Best Layout), or <strong>Lehua</strong> (Local).</p>
-                </div>
-                <div class="food-item">
-                    <h3>Must Try: Stinky Tofu</h3>
-                    <p>You'll smell it before you see it. Try it fried or with french fries to start!</p>
-                </div>
-                <div class="food-item">
-                    <h3>Tea Culture</h3>
-                    <p>From milk tea to Oolong. Tea shops are on every corner (like TPT or the Oolong Tea Project).</p>
-                </div>
-                <div class="food-item">
-                    <h3>Payment Tip</h3>
-                    <p>Pay at the counter when leaving sit-down restaurants. 10% service charge is common.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sights" class="bg-light section-padding">
-        <div class="container">
-            <h2 class="section-title">Popular Places</h2>
-            <ul class="sights-list">
-                <li>
-                    <strong>Taipei 101</strong> - Formerly world's tallest. Great observatory and mall.
-                </li>
-                <li>
-                    <strong>Elephant Mountain</strong> - Hike here for the best view <em>of</em> Taipei 101.
-                </li>
-                <li>
-                    <strong>Shilin Night Markeet</strong> - Snacks.
-                </li>
-                <li>
-                    <strong>National Palace Museum</strong> - World's best collection of Chinese artifacts (Jade Cabbage!).
-                </li>
-                <li>
-                    <strong>Chiang Kai-shek Memorial Hall</strong> - Grand architecture and changing of the guards.
-                </li>
-                <li>
-                    <strong>Taipei Zoo & Maokong Gondola</strong> - Pandas, cheap entry, and a scenic cable car ride for tea.
-                </li>
-                <li>
-                    <strong>Dihua Street</strong> - Historic 1600s street perfect for traditional shopping.
-                </li>
-            </ul>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>Based on the guide by Yellow Productions. <a href="https://www.youtube.com/watch?v=gJueucOQT5M" target="_blank">Watch original video</a>.</p>
-            <p>&copy; <span id="year"></span> Taipei Travel Guide</p>
+            <p>&copy; <span id="year"></span> Taipei Guide</p>
         </div>
     </footer>
 
