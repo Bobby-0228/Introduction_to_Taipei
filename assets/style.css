@@ -116,12 +116,12 @@ ul {
 .hero-npm {
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('img/National Palace Museum/National Palace Museum.jpg');
+        url('img/common/npm-hero.jpg');
 }
 .hero-ynp {
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('img/Yangmingshan National Park/cover.jpg');
+        url('img/common/ynp-hero.jpg');
 }
 
 .hero h1 {
