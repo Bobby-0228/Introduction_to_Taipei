@@ -113,6 +113,7 @@ ul {
     text-align: center;
     color: white;
 }
+/* Hero Image */
 .hero-npm {
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
@@ -122,6 +123,11 @@ ul {
     background-image:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
         url('img/common/ynp-hero.jpg');
+}
+.hero-snm {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('img/common/snm-hero.jpg');
 }
 
 .hero h1 {

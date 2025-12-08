@@ -9,31 +9,24 @@
 </head>
 <body>
 
-    <!-- Navbar (same as main site) -->
+    <!-- Navbar (same as National Palace Museum page) -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">Taipei<span>Guide</span></a>
             <ul class="nav-links">
+                <li><a href="index.html#sights">Sights</a></li>
+                <li><a href="index.html#essentials">Essentials</a></li>
                 <li><a href="index.html#orientation">Orientation</a></li>
                 <li><a href="index.html#transport">Transport</a></li>
-                <li><a href="index.html#essentials">Essentials</a></li>
-                <li><a href="index.html#food">Food</a></li>
-                <li><a href="index.html#sights">Sights</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" style="
-        background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://images.unsplash.com/photo-1538556216903-9f535b35f7a8?q=80&w=2070&auto=format&fit=crop');
-        background-size: cover;
-        background-position: center;
-    ">
+    <header class="hero hero-snm">
         <div class="hero-content">
             <h1>Shilin Night Market</h1>
-            <p>Taipei’s most iconic night market—food, culture, and endless energy.</p>
+            <p>Taipei’s most iconic night market—food, games, and an endless night-time buzz.</p>
         </div>
     </header>
 
@@ -51,7 +44,7 @@
                 </p>
             </div>
 
-            <div class="card" style="margin-top: 20px;">
+            <div class="card mt-20">
                 <h3>Historical Background</h3>
                 <p>
                     The market traces its origins back to the early 1900s, beginning as the Shilin daytime market 
@@ -59,64 +52,157 @@
                     throughout the surrounding streets. Today, Shilin has evolved into a major entertainment 
                     and culinary destination that attracts millions of visitors every year.
                 </p>
-                <p style="margin-top: 10px;">
+                <p class="mt-10">
                     <strong>Nearest MRT:</strong> Jiantan Station (Red Line) — Exit 1 leads directly to the main entrance.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Must-Try Foods -->
+    <!-- Must-Try Foods (tab buttons) -->
     <section class="section-padding">
         <div class="container">
             <h2 class="section-title">Must-Try Foods</h2>
 
-            <div class="food-grid">
+            <!-- Tab buttons -->
+             <div class="tabs">
+                <button class="tab-btn active" data-target="food-chicken">Chicken Cutlet</button>
+                <button class="tab-btn" data-target="food-sausage">Sausage in Sticky Rice</button>
+                <button class="tab-btn" data-target="food-oyster">Oyster Omelet</button>
+                <button class="tab-btn" data-target="food-stinkytofu">Stinky Tofu</button>
+            </div>
 
-                <!-- Fried Chicken Cutlet -->
-                <div class="food-item">
-                    <img src="https://images.unsplash.com/photo-1604908177063-746f3b9f6c61?q=80&w=2069&auto=format&fit=crop" 
-                         alt="Fried Chicken" style="width:100%; border-radius:8px; margin-bottom:15px;">
-                    <h3>Large Fried Chicken Cutlet</h3>
-                    <p>
-                        A Shilin classic—oversized, crispy fried chicken cutlet seasoned with pepper or chili. 
-                        One of the most iconic foods in the entire market.
-                    </p>
+            <!-- Detail Panel (tab contents) -->
+            <div class="card">
+                <!-- Chicken Cutlet -->
+                <div id="food-chicken" class="tab-content active">
+                    <div>
+                        <img src="assets/img/shilin-night-market/snm-chicken-cutlet.jpg"
+                            alt="Fried chicken cutlet"
+                            class="main-img">
+                    </div>
+                    <div>
+                        <h3>Chicken Cutlet (Recommended: Try Both Versions!)</h3>
+                        <p>
+                            Shilin’s famous chicken cutlet comes in two irresistible styles:<br>
+                            - The classic version is <strong>deep-fried</strong> to a golden, crispy finish.<br>
+                            - Some stalls <strong>grill it over charcoal after frying</strong>, adding smoky aroma and caramelized edges.
+                        </p>
+                        <p class="mt-10">
+                            Both versions taste completely different—<strong>try both</strong> for the full experience!
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Rice Sausage -->
-                <div class="food-item">
-                    <img src="https://images.unsplash.com/photo-1605962053760-9105ad756f74?q=80&w=2070&auto=format&fit=crop" 
-                         alt="Taiwanese sausage" style="width:100%; border-radius:8px; margin-bottom:15px;">
-                    <h3>Taiwanese Rice Sausage</h3>
-                    <p>
-                        “Big sausage wrapped in small sausage”—a grilled sticky rice bun wrapped around 
-                        Taiwanese pork sausage, served with garlic and sweet soy sauce.
-                    </p>
+                <!-- Sausage in Sticky Rice -->
+                <div id="food-sausage" class="tab-content">
+                    <div>
+                        <img src="assets/img/shilin-night-market/snm-sausage.jpg"
+                            alt="Sausage in Sticky Rice"
+                            class="main-img">
+                    </div>
+                    <div>
+                        <h3>Sausage in Sticky Rice</h3>
+                        <p>
+                            A Taiwanese street food icon also known as “big sausage wrapped in small sausage.”  
+                            A grilled sticky rice bun is sliced open and stuffed with a juicy pork sausage.
+                        </p>
+                        <p class="mt-10">
+                            Served with garlic, pickles, sweet soy, or chili sauce — chewy, smoky, and incredibly satisfying.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Oyster Omelet -->
-                <div class="food-item">
-                    <img src="https://images.unsplash.com/photo-1582901600666-0c95df9f05b1?q=80&w=2070&auto=format&fit=crop" 
-                         alt="Oyster omelet" style="width:100%; border-radius:8px; margin-bottom:15px;">
-                    <h3>Oyster Omelet</h3>
-                    <p>
-                        A Taiwanese staple made with oysters, egg, starch batter, and a signature sweet-salty sauce. 
-                        Rich, chewy, and full of flavor.
-                    </p>
+                <div id="food-oyster" class="tab-content">
+                    <div>
+                        <img src="assets/img/shilin-night-market/snm-oyster-omlet.jpg"
+                            alt="Oyster omelet"
+                            class="main-img">
+                    </div>
+                    <div>
+                        <h3>Oyster Omelet</h3>
+                        <p>
+                            A classic Taiwanese night market dish with fresh oysters, egg, and a chewy batter.  
+                            Topped with the famous sweet–savory sauce that defines its flavor.
+                        </p>
+                        <p class="mt-10">
+                            Many stalls specialize in this dish — follow the crowds to find the best one.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Beef Cubes -->
-                <div class="food-item">
-                    <img src="https://images.unsplash.com/photo-1603031176566-df7e6b3dfcc6?q=80&w=2070&auto=format&fit=crop" 
-                         alt="Beef cubes" style="width:100%; border-radius:8px; margin-bottom:15px;">
-                    <h3>Flame-Grilled Beef Cubes</h3>
-                    <p>
-                        Fresh beef cubes torched to perfection. 
-                        Often seasoned with sea salt, garlic, or black pepper for a smoky, juicy bite.
-                    </p>
+                <!-- Stinky Tofu -->
+                <div id="food-stinkytofu" class="tab-content">
+                    <div>
+                        <img src="assets/img/shilin-night-market/snm-stinky-tofu.jpg"
+                            alt="Stinky tofu"
+                            class="main-img">
+                    </div>
+                    <div>
+                        <h3>Stinky Tofu (Fried & Stewed)</h3>
+                        <p>
+                            Shilin offers both major styles of Taiwan’s infamous stinky tofu:<br>
+                            • <strong>Fried</strong> — crispy outside, tender inside, served with pickled cabbage.<br>
+                            • <strong>Stewed</strong> — simmered in a rich broth, softer and more pungent.
+                        </p>
+                        <p class="mt-10">
+                            A must-try for adventurous eaters — the smell is strong, but the flavor wins many fans.
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Visiting Tips -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Visiting Tips</h2>
+
+            <div class="card">
+                <h3>How to Make the Most of Your Visit</h3>
+                <p>
+                    Shilin Night Market gets busy, especially on weekends and holidays. 
+                    If you want to avoid the biggest crowds, aim to arrive in the early evening 
+                    (around 5~6 pm) or later at night after 9:00 pm. Most food stalls stay open 
+                    until around midnight.
+                </p>
+                <p class="mt-10">
+                    Start from <strong>Jiantan Station Exit 1 (Not Shilin Station!)</strong>, follow the crowd toward the main entrance, 
+                    and slowly work your way through side alleys. Try sharing dishes with friends so you can 
+                    sample more stalls without getting full too quickly. Wear comfortable shoes—the alleys can 
+                    be narrow, slightly uneven, and you might end up walking more than you expect.
+                </p>
+                <p class="mt-10">
+                    Be prepared for strong smells (like stinky tofu), lots of sizzling grills, and game 
+                    booths with claw machines and carnival-style games. If you prefer a more relaxed vibe, 
+                    visit on a weekday night and avoid typhoon days or heavy rain when some outdoor stalls 
+                    may close early.
+                </p>
+            </div>
+
+            <div class="card mt-20">
+                <h3>Practical Information</h3>
+
+                <ul class="info-list">
+                    <li><strong>Location:</strong> Shilin District, Taipei City, near Jiantan MRT Station (Red Line).</li>
+                    <li><strong>Opening Hours:</strong> Generally late afternoon to around midnight; peak time is 7–10 pm.</li>
+                    <li><strong>Best Time to Visit:</strong> Weekday evenings for fewer crowds; weekends are the most lively but also the most crowded.</li>
+                    <li><strong>Payment:</strong> Many stalls are cash-only. Mobile payments such as LINE Pay or JKoPay are increasingly accepted, 
+                        but credit cards are still uncommon—bring enough cash just in case.</li>
+                    <li><strong>Nearest MRT:</strong> Jiantan Station (Red Line), Exit 1. Follow the pedestrian flow across the street to reach the main entrance.</li>
+                </ul>
+
+                <!-- Google Map Embed -->
+                <div class="map-container mt-20">
+                    <iframe
+                        src="https://www.google.com/maps?q=Shilin+Night+Market+Taipei&z=16&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -124,7 +210,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Taipei Travel Guide</p>
+            <p>&copy; <span id="year"></span> Taipei Guide</p>
         </div>
     </footer>
 
