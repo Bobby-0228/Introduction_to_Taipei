@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taipei 101 Guide</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar (same as main site) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Taipei<span>Guide</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#sights">Sights</a></li>
+                <li><a href="index.html#essentials">Essentials</a></li>
+                <li><a href="index.html#orientation">Orientation</a></li>
+                <li><a href="index.html#transport">Transport</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-tpe101">
+        <div class="hero-content">
+            <h1>Taipei 101</h1>
+            <p>Once the world’s tallest tower, still Taipei’s most iconic landmark.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">About Taipei 101</h2>
+
+            <div class="card">
+                <h3>Introduction</h3>
+                <p>
+                    Taipei 101 is Taiwan’s most recognizable skyscraper and a symbol of modern Taipei. 
+                    Standing 508 meters tall with 101 floors above ground, it was officially the world’s 
+                    tallest building from 2004 to 2010. Today, it remains a major financial center, a 
+                    popular tourist attraction, and a key part of the city skyline.
+                </p>
+                <p class="mt-10">
+                    Inside the tower, you’ll find high-speed elevators, indoor and outdoor observatory decks, 
+                    a multi-level shopping mall, and a wide range of restaurants and cafés. The building is also 
+                    known for its green design and was one of the first supertall skyscrapers to receive 
+                    LEED Platinum certification for energy efficiency.
+                </p>
+
+                <!-- Photo Carousel (same structure as NPM) -->
+                <div class="intro-photo-carousel">
+                    <button class="carousel-arrow prev" aria-label="Previous photo">&#10094;</button>
+
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <img src="assets/img/taipei-101/carousel/tpe101-daytime.jpg" alt="Taipei 101 daytime view">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taipei-101/carousel/tpe101-night.jpg" alt="Taipei 101 at night">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taipei-101/carousel/tpe101-fireworks.jpg" alt="Taipei 101 New Year fireworks">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taipei-101/carousel/tpe101-observatory.jpg" alt="View from Taipei 101 observatory">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taipei-101/carousel/tpe101-damper.jpg" alt="Taipei 101 damper">
+                        </div>
+                        
+                    </div>
+
+                    <button class="carousel-arrow next" aria-label="Next photo">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="card card-flex mt-20">
+                <div class="card-text">
+                    <h3>Design and Engineering</h3>
+
+                    <p>
+                        Designed by architect C.Y. Lee, Taipei 101 combines modern engineering with 
+                        traditional Asian symbolism. The stacked “bamboo” form represents growth and resilience, 
+                        while many details—such as the repeated use of the number eight—reflect auspicious elements 
+                        in Chinese culture.
+                    </p>
+
+                    <p class="mt-10">
+                        Because Taiwan is prone to earthquakes and typhoons, Taipei 101 was built with advanced 
+                        structural systems to handle strong winds and seismic activity. The most famous feature is 
+                        the giant tuned mass damper: a 660-ton steel sphere suspended between the 87th and 92nd floors. 
+                        It swings slightly to counteract building movement, making high floors more comfortable during 
+                        storms.
+                    </p>
+
+                    <p class="mt-10">
+                        Beyond its architectural significance, Taipei 101 has become a venue for major events, 
+                        including the world-famous New Year’s Eve fireworks show, international races up its 
+                        stairwells, and numerous cultural and commercial activities throughout the year.
+                    </p>
+                </div>
+
+                <div class="card-image">
+                    <img src="assets/img/taipei-101/tpe101-building.jpg" alt="Taipei 101 architecture and design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section (tab-style like NPM Three Treasures) -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Highlights of Taipei 101</h2>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-target="highlight-observatory">
+                    Observatory Decks
+                </button>
+                <button class="tab-btn" data-target="highlight-damper">
+                    Tuned Mass Damper
+                </button>
+                <button class="tab-btn" data-target="highlight-mall">
+                    Mall &amp; Dining
+                </button>
+            </div>
+
+            <!-- Detail Panel -->
+            <div class="card">
+                <!-- Observatory Decks -->
+                <div id="highlight-observatory" class="tab-content active">
+                    <div>
+                        <img
+                            src="assets/img/taipei-101/tpe101-observatory.webp"
+                            alt="Taipei 101 observatory view"
+                            class="main-img"
+                        >
+                    </div>
+                    <div>
+                        <h3>Observatory Decks</h3>
+                        <p>
+                            The Taipei 101 Observatory offers panoramic views of Taipei and the surrounding mountains 
+                            from the upper floors of the tower. The indoor observatory is fully enclosed and air-conditioned, 
+                            with large floor-to-ceiling windows and multilingual audio guides that explain landmarks across the city.
+                        </p>
+                        <p class="mt-10">
+                            On good-weather days, the outdoor observatory (when open) lets you step onto a terrace and feel the 
+                            height more directly. Sunset and early evening are especially popular times, as you can watch the city 
+                            transition from day to night and see the lights of Xinyi District come alive.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tuned Mass Damper -->
+                <div id="highlight-damper" class="tab-content">
+                    <div>
+                        <img
+                            src="assets/img/taipei-101/tpe101-damper.jpg"
+                            alt="Taipei 101 tuned mass damper"
+                            class="main-img"
+                        >
+                    </div>
+                    <div>
+                        <h3>Tuned Mass Damper</h3>
+                        <p>
+                            One of Taipei 101’s most unique features is its giant tuned mass damper: a massive 
+                            golden sphere weighing around 660 tons, suspended by steel cables inside the tower. 
+                            When strong winds or earthquakes cause the building to sway, the damper moves in the 
+                            opposite direction, reducing the motion and keeping the ride more comfortable.
+                        </p>
+                        <p class="mt-10">
+                            The damper is visible from the observatory, and information panels explain how it works 
+                            in simple terms. For many visitors, seeing this huge ball gently oscillate is just as 
+                            memorable as the city views outside.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mall & Dining -->
+                <div id="highlight-mall" class="tab-content">
+                    <div>
+                        <img
+                            src="assets/img/taipei-101/tpe101-mall.jpg"
+                            alt="Taipei 101 mall interior"
+                            class="main-img"
+                        >
+                    </div>
+                    <div>
+                        <h3>Taipei 101 Mall &amp; Dining</h3>
+                        <p>
+                            At the base of the tower, Taipei 101 Mall offers a mix of luxury brands, lifestyle shops, 
+                            and specialty stores. Even if you don’t go up to the observatory, the mall area is worth a visit 
+                            for window shopping and people-watching in the heart of Xinyi District.
+                        </p>
+                        <p class="mt-10">
+                            The building and its surroundings also have plenty of dining options—from food courts and casual 
+                            restaurants to upscale venues with views. It’s easy to combine a visit to Taipei 101 with nearby malls 
+                            and pedestrian areas, making this one of the best spots in Taipei for an evening stroll.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visiting Tips -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Visiting Tips</h2>
+
+            <div class="card">
+                <h3>How to Make the Most of Your Visit</h3>
+                <p>
+                    For the best experience, consider timing your visit so you can see both daylight and night views—arriving 
+                    about an hour before sunset works well. On weekends and holidays, the observatory can get crowded, so 
+                    booking tickets in advance or visiting on a weekday usually means shorter lines.
+                </p>
+                <p class="mt-10">
+                    Check the weather forecast before you go: low clouds, heavy rain, or poor air quality can significantly 
+                    reduce visibility. If the view is completely blocked, it may be better to reschedule and simply enjoy the 
+                    mall, restaurants, and surrounding Xinyi shopping district instead.
+                </p>
+                <p class="mt-10">
+                    Elevators can be busy during peak times; follow staff instructions and be prepared for a short wait. 
+                    If you’re planning a full day in the area, you can combine Taipei 101 with <a href="elephant_mountain.html" class="inline-link">Elephant Mountain</a> 
+                    for great hiking views, or simply explore the nearby malls and plazas on foot.
+                </p>
+            </div>
+
+            <div class="card mt-20">
+                <h3>Practical Information</h3>
+
+                <ul class="info-list">
+                    <li><strong>Location:</strong> Xinyi District, Taipei City</li>
+                    <li><strong>Nearest MRT:</strong> Taipei 101 / World Trade Center Station (Red Line), Exit 4.</li>
+                    <li><strong>Opening Hours (Observatory):</strong> Typically from late morning to evening; check the official website for the latest times and any temporary closures.</li>
+                    <li><strong>Tickets:</strong> Discounts may be available for students, children, and online bookings. Fast-track options are sometimes offered during busy seasons.</li>
+                    <li><strong>Suggested Time:</strong> Around 1.5–2 hours for the observatory, longer if you plan to shop and dine.</li>
+                </ul>
+
+                <!-- Google Map Embed -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m2!2m1!1sTaipei+101!5e0!3m2!1sen!2stw!4v1700000000002!5m2!1sen!2stw"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Taipei Guide</p>
+        </div>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
