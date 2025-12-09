@@ -1,4 +1,6 @@
-# Introduction to Taipei — Web Design Final Project
+### This project is site is live at: https://bobby-0228.github.io/Introduction_to_Taipei/
+
+# TaipeiGuide — Web Design Final Project
 
 This repository contains my **Web Design Final Project**, a mini travel guide website introducing Taipei’s most iconic attractions.  
 
