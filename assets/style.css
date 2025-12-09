@@ -327,6 +327,7 @@ footer a:hover { text-decoration: underline; }
     gap: 12px;
     height: 230px;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-arrow {
@@ -337,11 +338,22 @@ footer a:hover { text-decoration: underline; }
     padding: 4px 8px;
     color: #666;
     transition: color 0.2s, transform 0.2s;
+    position: absolute;           
+    top: 50%;                     
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+.carousel-arrow.prev {
+    left: 5px;
+}
+
+.carousel-arrow.next {
+    right: 5px;
 }
 
 .carousel-arrow:hover {
     color: #e74c3c;
-    transform: scale(1.1);
 }
 
 .carousel-track {
@@ -506,15 +518,19 @@ footer a:hover { text-decoration: underline; }
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
+    background: transparent;
     border: none;
-    color: white;
+    color: #666;
     font-size: 2rem;
     padding: 5px 15px;
     cursor: pointer;
 }
 .hero-arrow.left { left: -40px; }
 .hero-arrow.right { right: -40px; }
+
+.hero-arrow:hover {
+    color: #e74c3c;
+}
 
 /* Landing Page Style Sheet */
 
@@ -581,9 +597,6 @@ footer a:hover { text-decoration: underline; }
 @media (max-width: 768px) {
     #landing-page-content h1 { font-size: 2.5rem; }
     #landing-page-content p { font-size: 1.1rem; }
-}
-
-@media (max-width: 768px) {
     .hero-arrow.left { left: 10px; }
     .hero-arrow.right { right: 10px; }
 }
