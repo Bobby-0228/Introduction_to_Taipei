@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
+            if (targetElement) {//is navbar
                 const headerOffset = 70; // height of fixed navbar
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Control the Carouosel image display on sight pages */
 
 function initIntroCarousel() {
-    const carousel = document.querySelector('.intro-photo-carousel');
-    if (!carousel) return;
+    const carousel = document.querySelector('.intro-photo-carousel');//not navbar
+    if (!carousel) return;//is navbar
 
     const items = carousel.querySelectorAll('.carousel-item');
     const imgElements = carousel.querySelectorAll('.carousel-item img');
