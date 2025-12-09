@@ -1,27 +1,28 @@
 // assets/main.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Dynamic Year in Footer（所有頁面共用）
+    // 1. Dynamic Year in Footer（shared in all pages）
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Tabs 功能
+    // 2. Tabs 
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
     if (tabButtons.length && tabContents.length) {
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // 先清掉全部 active
+                // Remove active from all buttons & panels
+                // (Tabs are mutually exclusive: only one can be active at a time)
                 tabButtons.forEach(btn => btn.classList.remove('active'));
                 tabContents.forEach(content => content.classList.remove('active'));
 
-                // 按鈕本身加 active
+                // button itself should be active
                 button.classList.add('active');
 
-                // 顯示對應內容
+                // content active
                 const target = button.getAttribute('data-target');
                 const targetEl = document.getElementById(target);
                 if (targetEl) {
@@ -31,19 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Smooth Scroll for Navigation Links（只會作用在 href 以 # 開頭的）
+    // 3. Smooth Scroll for Navigation Links on index page（apply only on href starting with #)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
+            // get ID and element of the target
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                const headerOffset = 70; // 如果有 fixed navbar
+                const headerOffset = 70; // height of fixed navbar
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
+                // Scroll to target smoothly
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
@@ -55,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initIntroCarousel();
 });
 
+
+/* ===== Carousel ===== */
+/* Control the Carouosel image display on sight pages */
+
 function initIntroCarousel() {
     const carousel = document.querySelector('.intro-photo-carousel');
     if (!carousel) return;
@@ -63,10 +70,10 @@ function initIntroCarousel() {
     const imgElements = carousel.querySelectorAll('.carousel-item img');
     if (!items.length || !imgElements.length) return;
 
-    // 先把原始圖片路徑存起來
+    // Save original image path
     const imageUrls = Array.from(imgElements).map(img => img.getAttribute('src'));
     const total = imageUrls.length;
-    let offset = 0; // 控制目前顯示的起點
+    let offset = 0; // current start
 
     const render = (withAnimation = false) => {
         items.forEach((item, i) => {
@@ -74,17 +81,17 @@ function initIntroCarousel() {
             const index = (i + offset + total) % total;
             img.src = imageUrls[index];
 
-            // 先移除 center / fade
+            // remove center / fade
             item.classList.remove('center', 'fade');
         });
 
-        // 中間這個格子當主圖（index 2，0-based）
+        // set the central one as the main image（index 2，0-based）
         const centerItem = items[2];
         if (centerItem) {
             centerItem.classList.add('center');
 
             if (withAnimation) {
-                // 重新觸發動畫（小技巧：強制 reflow）
+                // re-trigger animation（tips: force reflow）
                 centerItem.classList.remove('fade');
                 void centerItem.offsetWidth;
                 centerItem.classList.add('fade');
@@ -98,22 +105,23 @@ function initIntroCarousel() {
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             offset = (offset - 1 + total) % total;
-            render(true);   // 帶動畫
+            render(true);   // with animation
         });
     }
 
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             offset = (offset + 1) % total;
-            render(true);   // 帶動畫
+            render(true);   // with animation
         });
     }
 
-    // 初始渲染（不需要動畫）
+    // Initial render（w/o animation）
     render(false);
 }
 
 /* ===== Hero Slider ===== */
+/* Control the hero slide on index.html */
 
 document.addEventListener("DOMContentLoaded", () => {
     initHeroSlider();
@@ -125,6 +133,8 @@ function initHeroSlider() {
     const rightBtn = document.querySelector(".hero-arrow.right");
     const heroHeader = document.querySelector(".hero.hero-index"); // header in index.html
 
+    // Early Return: If hero does not exist on this page, skip initialization.
+    // (Prevents errors when script.js is reused in sub-pages)
     if (!slides.length || !heroHeader) return;
 
     // Current slide index
@@ -142,7 +152,8 @@ function initHeroSlider() {
 
         // Apply "data-bg-class" to header (change header background)
         if (bgClass) {
-            // Remove all classes that start with "hero-"
+            // Remove old hero background class (hero-xxx)
+            // so the header shows the background that matches the current slide
             Array.from(heroHeader.classList)
                 .filter(cls => cls.startsWith("hero-"))
                 .forEach(cls => heroHeader.classList.remove(cls));
